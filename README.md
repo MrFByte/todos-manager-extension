@@ -10,16 +10,16 @@
   <em>built for humans and AI agents alike</em>
 </p>
 
-<p align="center">
-  <a href="https://marketplace.visualstudio.com/items?itemName=antigravity.todo-manager">
-    <img src="https://img.shields.io/visual-studio-marketplace/v/antigravity.todo-manager?color=blue&label=VS%20Marketplace&logo=visual-studio-code" alt="VS Marketplace Version" />
+<!-- <p align="center">
+  <a href="https://marketplace.visualstudio.com/items?itemName=antigravity.todos-manager">
+    <img src="https://img.shields.io/visual-studio-marketplace/v/antigravity.todos-manager?color=blue&label=VS%20Marketplace&logo=visual-studio-code" alt="VS Marketplace Version" />
   </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=antigravity.todo-manager">
-    <img src="https://img.shields.io/visual-studio-marketplace/d/antigravity.todo-manager?color=green&label=Downloads" alt="Downloads" />
+  <a href="https://marketplace.visualstudio.com/items?itemName=antigravity.todos-manager">
+    <img src="https://img.shields.io/visual-studio-marketplace/d/antigravity.todos-manager?color=green&label=Downloads" alt="Downloads" />
   </a>
   <img src="https://img.shields.io/badge/VS%20Code-%5E1.80.0-blueviolet?logo=visual-studio-code" alt="VS Code Engine" />
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="MIT License" />
-</p>
+</p> -->
 
 ---
 
@@ -180,8 +180,8 @@ All commands are accessible via the Command Palette (`Ctrl+Shift+P`):
 1. **Prerequisites**: Install [Node.js](https://nodejs.org/) and [VS Code](https://code.visualstudio.com/).
 2. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/todo-vs-code-extension.git
-   cd todo-vs-code-extension
+   git clone https://github.com/MrFByte/todos-manager-extension
+   cd todos-manager-extension
    ```
 3. **Install dependencies**:
    ```bash
