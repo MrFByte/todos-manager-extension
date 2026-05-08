@@ -1,0 +1,119 @@
+{
+  "name": "todo-manager",
+  "displayName": "Todo Manager",
+  "description": "A file-based TODO management system with a sidebar tree view. Create, manage, and track tasks stored as Markdown files — perfect for developers and AI coding agents.",
+  "version": "1.0.0",
+  "publisher": "antigravity",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "icon": "resources/todos-icon.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "todo-explorer",
+          "title": "Todos",
+          "icon": "resources/todos-icon.png"
+        }
+      ]
+    },
+    "views": {
+      "todo-explorer": [
+        {
+          "id": "todo-tree-view",
+          "name": "Todos",
+          "icon": "resources/todos-icon.png"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "todo.createList",
+        "title": "Create Todo List",
+        "category": "Todo"
+      },
+      {
+        "command": "todo.addTask",
+        "title": "Add Todo Task",
+        "category": "Todo",
+        "icon": "$(add)"
+      },
+      {
+        "command": "todo.toggleTask",
+        "title": "Toggle Task Complete",
+        "category": "Todo"
+      },
+      {
+        "command": "todo.deleteTask",
+        "title": "Delete Task",
+        "category": "Todo",
+        "icon": "$(trash)"
+      },
+      {
+        "command": "todo.editTask",
+        "title": "Edit Task",
+        "category": "Todo",
+        "icon": "$(edit)"
+      },
+      {
+        "command": "todo.refresh",
+        "title": "Refresh Todos",
+        "category": "Todo",
+        "icon": "$(refresh)"
+      }
+    ],
+    "menus": {
+      "view/item/context": [
+        {
+          "command": "todo.addTask",
+          "when": "view == todo-tree-view && viewItem == todoFile",
+          "group": "inline"
+        },
+        {
+          "command": "todo.editTask",
+          "when": "view == todo-tree-view && viewItem == todoItem",
+          "group": "inline"
+        },
+        {
+          "command": "todo.deleteTask",
+          "when": "view == todo-tree-view && viewItem == todoItem",
+          "group": "inline"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "todo.createList",
+          "when": "view == todo-tree-view",
+          "group": "navigation"
+        },
+        {
+          "command": "todo.refresh",
+          "when": "view == todo-tree-view",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "16.x",
+    "typescript": "^5.1.3",
+    "eslint": "^8.41.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8"
+  }
+}
