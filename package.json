@@ -1,18 +1,36 @@
 {
-  "name": "todo-manager",
-  "displayName": "Todo Manager",
-  "description": "A file-based TODO management system with a sidebar tree view. Create, manage, and track tasks stored as Markdown files — perfect for developers and AI coding agents.",
-  "version": "1.0.0",
-  "publisher": "antigravity",
+  "name": "todos-manager",
+  "displayName": "Todos Manager",
+  "description": "A file-based todos management system with a sidebar tree view. Create, manage, and track tasks stored as Markdown files — perfect for developers and AI coding agents.",
+  "version": "1.1.0",
+  "publisher": "MrFByte",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrFByte/todos-manager-extension.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
+  "keywords": [
+    "todo",
+    "todos",
+    "todos-manager",
+    "task",
+    "tasks",
+    "task manager",
+    "todo list",
+    "productivity",
+    "markdown",
+    "checklist",
+    "notes"
+  ],
   "categories": [
     "Other"
   ],
   "activationEvents": [],
   "icon": "resources/todos-icon.png",
   "main": "./out/extension.js",
+  "license": "MIT",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
